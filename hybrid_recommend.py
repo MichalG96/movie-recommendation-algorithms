@@ -1,13 +1,17 @@
 import pandas as pd
 pd.options.mode.chained_assignment = None  # default='warn'
+
 import numpy as np
 import math
 from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy import sparse
+
 import logging
 logging.basicConfig(filename='logs/logs.log', level=logging.INFO, format='%(asctime)s - %(message)s', datefmt='%Y/%m/%d %H:%M:%S')
+
 import warnings
 warnings.filterwarnings("ignore")
+
 from collaborative_initial_data import CollaborativeInitial
 pd.set_option('display.max_rows', 50)
 pd.set_option('display.max_colwidth', -1)

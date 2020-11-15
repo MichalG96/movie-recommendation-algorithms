@@ -19,7 +19,7 @@ variance = variance.rename(columns={0: 'variance'})
 movies_count_variance = pd.merge(movies_count, variance, how='left')
 
 movies_sampled = movies_count_variance.sample(n=500, weights='ratings_count_squared')
-movies_sampled = movies_sampled.sort_values(by='variance', ascending=False)[:80]
+movies_sampled = movies_sampled.sort_values(by='variance', ascending=False)[:60]
 
 user_id = rating_matrix.shape[0]+1
 
